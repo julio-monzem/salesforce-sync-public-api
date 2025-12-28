@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <label>Address</label>
+    <pluralLabel>Addresses</pluralLabel>
+    <nameField>
+        <label>Address Name</label>
+        <type>Text</type>
+    </nameField>
+
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+
+    <!-- CEP -->
+    <fields>
+        <fullName>CEP__c</fullName>
+        <label>CEP</label>
+        <type>Text</type>
+        <length>9</length>
+        <required>false</required>
+    </fields>
+
+    <!-- Street -->
+    <fields>
+        <fullName>Street__c</fullName>
+        <label>Street</label>
+        <type>Text</type>
+        <length>255</length>
+        <required>false</required>
+    </fields>
+
+    <!-- Neighborhood -->
+    <fields>
+        <fullName>Neighborhood__c</fullName>
+        <label>Neighborhood</label>
+        <type>Text</type>
+        <length>255</length>
+        <required>false</required>
+    </fields>
+
+    <!-- City -->
+    <fields>
+        <fullName>City__c</fullName>
+        <label>City</label>
+        <type>Text</type>
+        <length>255</length>
+        <required>false</required>
+    </fields>
+
+    <!-- State -->
+    <fields>
+        <fullName>State__c</fullName>
+        <label>State</label>
+        <type>Text</type>
+        <length>2</length>
+        <required>false</required>
+    </fields>
+
+    <!-- Source Picklist -->
+    <fields>
+        <fullName>Source__c</fullName>
+        <label>Source</label>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ViaCEP</fullName>
+                    <label>ViaCEP</label>
+                    <default>true</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+
+</CustomObject>
