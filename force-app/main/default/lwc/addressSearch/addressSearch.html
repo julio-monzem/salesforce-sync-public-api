@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Search Address by CEP">
+        <div class="slds-p-around_medium">
+            <lightning-input
+                label="CEP"
+                value={cep}
+                onchange={handleChange}
+                maxlength="8">
+            </lightning-input>
+
+            <lightning-button
+                label="Search"
+                variant="brand"
+                class="slds-m-top_small"
+                onclick={handleSearch}>
+            </lightning-button>
+
+            <template if:true={address}>
+                <p class="slds-m-top_medium">
+                    <strong>{address.Street__c}</strong><br/>
+                    {address.Neighborhood__c}<br/>
+                    {address.City__c} - {address.State__c}
+                </p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
