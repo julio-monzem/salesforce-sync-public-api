@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+
+    <!-- ================= OBJECT ================= -->
+    <label>Weather</label>
+    <pluralLabel>Weather Records</pluralLabel>
+
+    <nameField>
+        <label>Weather Name</label>
+        <type>Text</type>
+        <length>80</length>
+    </nameField>
+
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+
+    <enableHistory>true</enableHistory>
+
+    <description>
+        Stores historical weather data collected from public APIs (OpenWeather).
+    </description>
+
+    <!-- ================= FIELDS ================= -->
+
+    <fields>
+        <fullName>City__c</fullName>
+        <label>City</label>
+        <type>Text</type>
+        <length>100</length>
+        <required>true</required>
+    </fields>
+
+    <fields>
+        <fullName>Country__c</fullName>
+        <label>Country</label>
+        <type>Text</type>
+        <length>2</length>
+        <required>true</required>
+    </fields>
+
+    <fields>
+        <fullName>Temperature__c</fullName>
+        <label>Temperature (°C)</label>
+        <type>Number</type>
+        <precision>5</precision>
+        <scale>2</scale>
+    </fields>
+
+    <fields>
+        <fullName>FeelsLike__c</fullName>
+        <label>Feels Like (°C)</label>
+        <type>Number</type>
+        <precision>5</precision>
+        <scale>2</scale>
+    </fields>
+
+    <fields>
+        <fullName>Humidity__c</fullName>
+        <label>Humidity (%)</label>
+        <type>Number</type>
+        <precision>3</precision>
+        <scale>0</scale>
+    </fields>
+
+    <fields>
+        <fullName>Condition__c</fullName>
+        <label>Weather Condition</label>
+        <type>Text</type>
+        <length>100</length>
+    </fields>
+
+    <fields>
+        <fullName>ConditionCode__c</fullName>
+        <label>Weather Code</label>
+        <type>Text</type>
+        <length>10</length>
+    </fields>
+
+    <fields>
+        <fullName>CollectedAt__c</fullName>
+        <label>Collected At</label>
+        <type>DateTime</type>
+        <required>true</required>
+    </fields>
+
+    <fields>
+        <fullName>Source__c</fullName>
+        <label>Source</label>
+        <type>Picklist</type>
+        <required>true</required>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>OpenWeather</fullName>
+                    <default>true</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+
+</CustomObject>
