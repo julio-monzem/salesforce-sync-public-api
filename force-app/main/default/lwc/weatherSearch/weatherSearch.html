@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Weather Search">
+        <div class="slds-p-around_medium">
+            <lightning-input
+                label="City"
+                value={city}
+                onchange={handleChange}>
+            </lightning-input>
+
+            <lightning-button
+                label="Get Weather"
+                variant="brand"
+                class="slds-m-top_small"
+                onclick={handleSearch}>
+            </lightning-button>
+
+            <template if:true={weather}>
+                <p class="slds-m-top_medium">
+                    <strong>{weather.City__c}</strong><br/>
+                    {weather.Temperature__c} °C<br/>
+                    Feels like: {weather.FeelsLike__c} °C<br/>
+                    Humidity: {weather.Humidity__c}%<br/>
+                    {weather.Condition__c}
+                </p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
