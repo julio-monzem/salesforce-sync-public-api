@@ -1,18 +1,20 @@
-# Salesforce DX Project: Next Steps
+# Salesforce ↔ Public APIs REST Sync
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+This project demonstrates **real-world Salesforce integrations with public REST APIs**, following **enterprise-grade architecture, security best practices, and full test coverage**.
 
-## How Do You Plan to Deploy Your Changes?
+It showcases how Salesforce can securely consume external APIs, persist data, automate processes, and expose information through Lightning Web Components (LWC).
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## Implemented Integrations
 
-## Configure Your Salesforce DX Project
+### ViaCEP (Brazilian Address API)
+- Public REST API (no authentication)
+- Address lookup by CEP (ZIP Code)
+- Data persisted in Salesforce custom objects
+- Exposed via LWC search interface
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+### OpenWeather API
+- Authenticated REST API (API Key)
+- Current weather data by city
+- Scheduled daily synchronization
+- Historical weather records stored in Salesforce
+- Fully testable using HttpCalloutMock
